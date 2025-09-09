@@ -39,7 +39,7 @@ export default function Home() {
       id: 6,
       title: "Formulário de Configuração",
       status: "pending",
-      link: "/pages/settingsForm"
+      link: "/pages/configurationForm"
     }
   ]
 
