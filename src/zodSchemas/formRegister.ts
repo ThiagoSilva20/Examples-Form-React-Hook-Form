@@ -36,7 +36,6 @@ export const registerFormSchemas = () => (
   })
 )
 
-
 export type registerTypeForm = z.infer<ReturnType<typeof registerFormSchemas>>
 
 export default registerFormSchemas

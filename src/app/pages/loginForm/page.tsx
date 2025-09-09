@@ -8,7 +8,6 @@ import {
     FormLabel, 
     FormMessage 
 } from "@/components/ui/form"
-import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -29,10 +28,9 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative">
+    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <HeaderLink nextForm="/pages/registerForm" previousForm="/" />
       
-      <div className="flex items-center justify-center min-h-screen p-4">
         <div className="bg-white rounded-md shadow-lg p-8 space-y-6 w-full max-w-md">
         <h1 className="font-bold text-center text-2xl">Login</h1>
         <Form {...form}>
@@ -67,7 +65,6 @@ export default function LoginForm() {
           </form>
         </Form>
         </div>
-      </div>
     </div>
   )
 }

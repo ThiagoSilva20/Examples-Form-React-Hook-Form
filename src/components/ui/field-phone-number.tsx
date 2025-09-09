@@ -15,13 +15,9 @@ interface PhoneInputProps {
   value?: string;
   onChange?: (value: string) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  [key: string]: any; // For additional props
 }
 
 export const FieldPhoneInput: React.FC<PhoneInputProps> = ({
-  label,
-  labels,
-  req,
   helperText,
   error,
   touched,
@@ -34,7 +30,7 @@ export const FieldPhoneInput: React.FC<PhoneInputProps> = ({
     <div className="flex items-center gap-2 w-full max-w-md">
       <div className="flex-1">
         <PhoneInput
-          country={'th'}
+          country={'br'}
           value={value}
           onChange={onChange}
           onBlur={onBlur}

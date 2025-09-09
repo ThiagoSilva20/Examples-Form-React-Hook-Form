@@ -20,7 +20,7 @@ export default function Home() {
     {
       id: 3,
       title: "Formulário de Contato",
-      status: "pending",
+      status: "completed",
       link: "/pages/contactForm"
     },
     {

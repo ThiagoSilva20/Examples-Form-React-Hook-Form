@@ -67,7 +67,7 @@ export default function RegisterForm() {
     }
 
     React.useEffect(() => {
-        if (Object.keys(form.formState.errors).length > 0) {
+        if(form.formState.errors) {
             console.log("Form errors:", form.formState.errors)
         }
     }, [form.formState.errors])
@@ -76,7 +76,9 @@ export default function RegisterForm() {
     return (
         <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
             <HeaderLink nextForm="/pages/contactForm" previousForm="/pages/loginForm" />
-            <div className="rounded-lg bg-white p-8">
+            <div className="rounded-lg bg-white p-8 space-y-6">
+        <h1 className="font-bold text-center text-2xl">Cadastro</h1>
+
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                         <div className="w-full grid grid-cols-2 gap-4">
@@ -199,8 +201,8 @@ export default function RegisterForm() {
                                 return (
                                     <FormItem>
                                         <FormLabel>Estado Civil</FormLabel>
-                                        <Select>
-                                            <SelectTrigger className="w-1/2" {...field}>
+                                        <Select {...field}>
+                                            <SelectTrigger className="w-1/2">
                                                 <SelectValue placeholder="Selecione o estado civil" />
                                             </SelectTrigger>
                                             <SelectContent>
@@ -253,6 +255,7 @@ export default function RegisterForm() {
                                             <FormControl>
                                                 <Input {...field} type="email" placeholder="Seu Email" />
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )
                                 }}
@@ -315,7 +318,7 @@ export default function RegisterForm() {
                                     <FormItem>
                                         <FormLabel>Código de Endereçamento Postal (CEP)</FormLabel>
                                         <FormControl>
-                                            <Input {...field} type="text" placeholder="CEP" />
+                                            <Input {...field} type="number" placeholder="CEP" />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
