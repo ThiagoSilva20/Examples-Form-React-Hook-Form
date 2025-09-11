@@ -14,7 +14,7 @@ export default function HeaderLink({ nextForm, previousForm }: HeaderLinkProps) 
       <div className="flex-1">
         <Link href={previousForm}>
           <Button className="cursor-pointer" variant="outline">
-            Voltar
+            {previousForm === "/" ? "Início" : "Voltar"}
           </Button>
         </Link>
       </div>
@@ -32,7 +32,7 @@ export default function HeaderLink({ nextForm, previousForm }: HeaderLinkProps) 
       <div className="flex-1 flex justify-end">
         <Link href={nextForm}>
           <Button className="cursor-pointer" variant="outline">
-            Próximo Formulário
+            {nextForm === "/" ? "Início" : "Próximo Formulário"}
           </Button>
         </Link>
       </div>

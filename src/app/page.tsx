@@ -25,22 +25,16 @@ export default function Home() {
     },
     {
       id: 4,
-      title: "Formulário de Pedido",  
-      status: "pending",
-      link: "/pages/orderForm"
+      title: "Formulário com Lista",  
+      status: "completed",
+      link: "/pages/listForm"
     },
     {
       id: 5,
       title: "Formulário de Feedback",
-      status: "pending",
+      status: "completed",
       link: "/pages/feedbackForm"
     },
-    {
-      id: 6,
-      title: "Formulário de Configuração",
-      status: "pending",
-      link: "/pages/configurationForm"
-    }
   ]
 
   return (
@@ -54,11 +48,11 @@ export default function Home() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {forms.map((form) => (
             <div
               key={form.id}
-              className={`bg-white rounded-lg p-6 border shadow-sm ${
+              className={`w-full sm:w-1/2 lg:w-1/3 bg-white rounded-lg p-6 border shadow-sm ${
                 form.status === 'completed' 
                   ? 'border-green-200' 
                   : 'border-yellow-200'
@@ -84,13 +78,13 @@ export default function Home() {
               <div className="mt-4">
                 {form.status === 'completed' ? (
                   <Link href={form.link}>
-                    <Button className="w-full">
+                    <Button className="w-full cursor-pointer">
                       Ver Formulário
                     </Button>
                   </Link>
                 ) : (
-                  <Button variant="outline" className="w-full" disabled>
-                    Criar Formulário
+                  <Button variant="outline" className="w-full cursor-pointer" disabled>
+                    Em Desenvolvimento
                   </Button>
                 )}
               </div>

@@ -33,7 +33,7 @@ export default function ContactForm() {
     }
     return (
         <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-            <HeaderLink nextForm="/pages/orderForm" previousForm="/pages/registerForm" />
+            <HeaderLink nextForm="/pages/listForm" previousForm="/pages/registerForm" />
             <Card className="">
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold text-center">Contact Form</CardTitle>
